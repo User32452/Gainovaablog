@@ -1,129 +1,202 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог фотографа | Кристина</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #fff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фотограф Кристина | Курсы и портфолио</title>
 
-        header {
-            background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    scroll-behavior: smooth;
+}
 
-        header h1 {
-            font-size: 50px;
-            background: rgba(0,0,0,0.6);
-            padding: 20px;
-        }
+header {
+    background: black;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav {
-            background: #000;
-            padding: 15px;
-            text-align: center;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+nav a:hover {
+    color: #f39c12;
+}
 
-        .blog-post {
-            background: #1c1c1c;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-        }
+section {
+    padding: 120px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
 
-        .course {
-            background: #ff4d00;
-            padding: 40px;
-            text-align: center;
-            border-radius: 10px;
-        }
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .course h2 {
-            margin-top: 0;
-        }
+.hero {
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1 !important;
+    transform: none !important;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
+.button {
+    background: #f39c12;
+    padding: 12px 25px;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #000;
-            margin-top: 50px;
-        }
-    </style>
+.button:hover {
+    background: white;
+}
+
+.course {
+    background: #222;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: black;
+    padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Блог фотографа Кристины</h1>
+<nav>
+<a href="#home">Главная</a>
+<a href="#about">Обо мне</a>
+<a href="#portfolio">Портфолио</a>
+<a href="#courses">Курсы</a>
+<a href="#contact">Контакты</a>
+</nav>
 </header>
 
-<nav>
-    <a href="#blog">Блог</a>
-    <a href="#courses">Курсы</a>
-    <a href="#about">Обо мне</a>
-</nav>
-
-<section id="blog">
-    <h2>Последние статьи</h2>
-
-    <div class="blog-post">
-        <h3>Как снимать Love Story на закате</h3>
-        <p>Делюсь реальным опытом съёмки в золотой час и настройками камеры.</p>
-    </div>
-
-    <div class="blog-post">
-        <h3>5 ошибок начинающих фотографов</h3>
-        <p>Разбираем основные ошибки и как их избежать.</p>
-    </div>
-</section>
-
-<section id="courses">
-    <div class="course">
-        <h2>Онлайн-курс «Фотограф с нуля до PRO»</h2>
-        <p>Пошаговое обучение: техника, свет, позирование, обработка, продвижение.</p>
-        <a href="#" class="btn">Записаться на курс</a>
-    </div>
+<section id="home" class="hero">
+<h1>Фотограф Кристина</h1>
+<p>Создаю стильные кадры и обучаю фотографии</p>
+<button class="button" onclick="scrollToSection('courses')">Смотреть курсы</button>
 </section>
 
 <section id="about">
-    <h2>Обо мне</h2>
-    <p>Меня зовут Кристина. Я профессиональный фотограф. Провожу съёмки Love Story, портретные и контент-съёмки. Делюсь опытом и обучаю новичков.</p>
+<h2>Обо мне</h2>
+<p>Профессиональный фотограф. Провожу обучение и делюсь опытом.</p>
+</section>
+
+<section id="portfolio">
+<h2>Портфолио</h2>
+
+<div class="portfolio-grid">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" onclick="openImage(this.src)">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" onclick="openImage(this.src)">
+<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" onclick="openImage(this.src)">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" onclick="openImage(this.src)">
+</div>
+
+</section>
+
+<section id="courses">
+<h2>Курсы</h2>
+
+<div class="course">
+<h3>Фотография с нуля</h3>
+<p>Полный старт в профессии</p>
+<a href="https://yoomoney.ru" target="_blank">
+<button class="button">Оплатить курс</button>
+</a>
+</div>
+
+<div class="course">
+<h3>Обработка в Lightroom</h3>
+<p>Секреты профессиональной цветокоррекции</p>
+<a href="https://yoomoney.ru" target="_blank">
+<button class="button">Оплатить курс</button>
+</a>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Связаться со мной</h2>
+<p>Email: example@mail.com</p>
 </section>
 
 <footer>
-    © 2026 Кристина | Блог фотографа
+<p>© 2026 Кристина | Фотограф</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView();
+}
+
+function openImage(src) {
+    window.open(src, "_blank");
+}
+
+// Анимация появления при скролле
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        if(position < window.innerHeight - 100) {
+            section.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
