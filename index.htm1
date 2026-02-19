@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог фотографа | Денис</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 50px;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+        }
+
+        nav {
+            background: #000;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .blog-post {
+            background: #1c1c1c;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .course {
+            background: #ff4d00;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .course h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Блог фотографа Дениса</h1>
+</header>
+
+<nav>
+    <a href="#blog">Блог</a>
+    <a href="#courses">Курсы</a>
+    <a href="#about">Обо мне</a>
+</nav>
+
+<section id="blog">
+    <h2>Последние статьи</h2>
+
+    <div class="blog-post">
+        <h3>Как снимать Love Story на закате</h3>
+        <p>Делюсь реальным опытом съёмки в золотой час и настройками камеры.</p>
+    </div>
+
+    <div class="blog-post">
+        <h3>5 ошибок начинающих фотографов</h3>
+        <p>Разбираем основные ошибки и как их избежать.</p>
+    </div>
+</section>
+
+<section id="courses">
+    <div class="course">
+        <h2>Онлайн-курс «Фотограф с нуля до PRO»</h2>
+        <p>Пошаговое обучение: техника, свет, позирование, обработка, продвижение.</p>
+        <a href="#" class="btn">Записаться на курс</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>Обо мне</h2>
+    <p>Меня зовут Кристина. Я профессиональный фотограф. Провожу съёмки Love Story, портретные и контент-съёмки. Делюсь опытом и обучаю новичков.</p>
+</section>
+
+<footer>
+    © 2026 Кристина | Блог фотографа
+</footer>
+
+</body>
+</html>
